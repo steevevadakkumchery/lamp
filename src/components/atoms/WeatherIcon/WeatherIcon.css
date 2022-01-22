@@ -2,6 +2,10 @@
   font-size: 2rem;
 }
 
+.weather-icon-medium {
+  font-size: 3em;
+}
+
 .weather-icon-large {
   font-size: 9rem;
   height: 170px;

@@ -1,0 +1,17 @@
+.week-table {
+  display: grid;
+  grid-template-columns: repeat(6, 5em);
+  grid-template-rows: 50px, 50px;
+  overflow-x: scroll;
+}
+
+.week-table > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+}
+
+.week-table::-webkit-scrollbar {
+  display: none;
+}
