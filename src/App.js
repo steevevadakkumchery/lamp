@@ -2,8 +2,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Homepage from "./pages/Homepage";
 import Details from "./pages/Details";
 import NotFound from "./pages/NotFound";
-import logo from "./logo.svg";
-import "./App.css";
 
 function App() {
   return (
