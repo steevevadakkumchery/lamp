@@ -1,13 +1,25 @@
 .location-item {
   height: 60px;
-  border: 1px solid salmon;
+  border: 1px solid lightgray;
+  border-radius: 1rem;
   margin: 10px 0;
   padding: 10px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
 }
 
-.location-item > div {
+.location-item:hover {
+  background: lightgray;
+}
+
+.temperature-and-icon-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: center;
+}
+
+.temperature {
+  margin-right: 10px;
 }

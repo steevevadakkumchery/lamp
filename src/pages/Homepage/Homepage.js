@@ -64,8 +64,8 @@ function Homepage() {
           <h1>Loading . . .</h1>
         ) : (
           <ul>
-            {cities.map(({ title, woeid }) => {
-              return <LocationListItem key={woeid} name={title} id={woeid} />;
+            {cities.map((cityData) => {
+              return <LocationListItem key={cityData.woeid} {...cityData} />;
             })}
           </ul>
         )}
