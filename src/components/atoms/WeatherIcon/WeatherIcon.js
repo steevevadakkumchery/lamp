@@ -12,10 +12,10 @@ const ICONS = {
   lc: "&#127781;",
   c: "&#127774;",
 };
-function WeatherIcon({ weatherState }) {
+function WeatherIcon({ weatherState, type }) {
   return (
     <span
-      className="weather-icon"
+      className={`weather-icon-${type}`}
       dangerouslySetInnerHTML={{ __html: ICONS[weatherState] }}
     />
   );

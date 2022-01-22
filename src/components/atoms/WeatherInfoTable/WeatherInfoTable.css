@@ -1,0 +1,13 @@
+table {
+  width: 100%;
+}
+
+tr,
+td {
+  height: 2em;
+  padding: 5px;
+}
+
+tr:nth-child(odd) {
+  background: lightgrey;
+}
