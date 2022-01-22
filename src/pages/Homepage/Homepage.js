@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import LocationListItem from "../../components/molecules/LocationListItem";
 import WeatherSearchBar from "../../components/molecules/WeatherSearchBar";
+import LoadingSpinner from "../../components/atoms/LoadingSpinner";
+import ListItemContainer from "../../components/atoms/ListItemContainer";
 import {
   getCitiesDataAll,
   getInitialCitiesDataAll,
@@ -44,6 +46,15 @@ function Homepage() {
     }
   };
 
+  const cityList = cities.length ? (
+    cities.map((cityData) => {
+      if (!cityData.hasOwnProperty("woeid")) return;
+      return <LocationListItem key={cityData.woeid} {...cityData} />;
+    })
+  ) : (
+    <ListItemContainer>No cities found!</ListItemContainer>
+  );
+
   return (
     <div className="page">
       <div className="section title">
@@ -60,15 +71,7 @@ function Homepage() {
 
       <div className="section locations">
         <h2 className="header">Locations</h2>
-        {loading ? (
-          <h1>Loading . . .</h1>
-        ) : (
-          <ul>
-            {cities.map((cityData) => {
-              return <LocationListItem key={cityData.woeid} {...cityData} />;
-            })}
-          </ul>
-        )}
+        {loading ? <LoadingSpinner /> : <ul>{cityList}</ul>}
       </div>
     </div>
   );

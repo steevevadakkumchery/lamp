@@ -1,5 +1,7 @@
-import "./LocationListItem.css";
 import WeatherIcon from "../../atoms/WeatherIcon";
+import ListItemContainer from "../../atoms/ListItemContainer";
+
+import "./LocationListItem.css";
 function LocationListItem({
   title: city,
   parent,
@@ -14,7 +16,7 @@ function LocationListItem({
 
   return (
     <li>
-      <div className="location-item">
+      <ListItemContainer selectable={true}>
         <div>
           <span>
             {city}, {country}
@@ -27,7 +29,7 @@ function LocationListItem({
           </span>
           <WeatherIcon weatherState={currentWeatherState} />
         </div>
-      </div>
+      </ListItemContainer>
     </li>
   );
 }
