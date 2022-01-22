@@ -1,11 +1,11 @@
 import "./LocationListItem.css";
 import WeatherIcon from "../../atoms/WeatherIcon";
-function LocationListItem() {
+function LocationListItem({ name }) {
   return (
     <li>
-      <div class="location-item">
+      <div className="location-item">
         <div>
-          <span>London</span>
+          <span>{name}</span>
           <span>See more</span>
         </div>
         <WeatherIcon src="https://via.placeholder.com/50" alt="weather icon" />
