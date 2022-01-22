@@ -1,4 +1,7 @@
 import { useState, useEffect } from "react";
+
+import PageContainer from "../../components/atoms/PageContainer";
+import Header from "../../components/atoms/Header";
 import LocationListItem from "../../components/molecules/LocationListItem";
 import WeatherSearchBar from "../../components/molecules/WeatherSearchBar";
 import LoadingSpinner from "../../components/atoms/LoadingSpinner";
@@ -56,12 +59,12 @@ function Homepage() {
   );
 
   return (
-    <div className="page">
-      <div className="section title">
-        <h1>Weather Finder</h1>
+    <PageContainer>
+      <div>
+        <Header />
       </div>
 
-      <div className="section input">
+      <div>
         <WeatherSearchBar
           value={searchValue}
           handleChange={handleSearchTextChange}
@@ -69,11 +72,11 @@ function Homepage() {
         />
       </div>
 
-      <div className="section locations">
+      <div className="locations">
         <h2 className="header">Locations</h2>
         {loading ? <LoadingSpinner /> : <ul>{cityList}</ul>}
       </div>
-    </div>
+    </PageContainer>
   );
 }
 

@@ -1,0 +1,11 @@
+.temperature-small {
+  font-size: 1rem;
+}
+
+.temperature-large {
+  font-size: 3rem;
+}
+
+.deg {
+  position: absolute;
+}

@@ -2,8 +2,6 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-}
-
-.temperature {
-  margin-right: 10px;
+  justify-content: space-between;
+  min-width: 60px;
 }
