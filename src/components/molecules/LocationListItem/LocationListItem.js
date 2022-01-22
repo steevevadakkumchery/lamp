@@ -1,8 +1,12 @@
 import "./LocationListItem.css";
 import WeatherIcon from "../../atoms/WeatherIcon";
-function LocationListItem({ title: city, parent, consolidated_weather }) {
+function LocationListItem({
+  title: city,
+  parent,
+  consolidated_weather: weatherData,
+}) {
   const country = parent.title;
-  const todayWeather = consolidated_weather[0];
+  const todayWeather = weatherData[0];
   const {
     weather_state_abbr: currentWeatherState,
     the_temp: currentTemperature,
