@@ -1,0 +1,35 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+}
+
+.section {
+  margin: 10px 0;
+  width: 100%;
+  display: flex;
+}
+
+.locations {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.locations .header {
+  margin: 0;
+}
+
+.locations ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
