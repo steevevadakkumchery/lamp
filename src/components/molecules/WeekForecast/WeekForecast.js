@@ -18,6 +18,7 @@ function WeekForecast({ weekData, handleDaySelect }) {
       {weekData.map(({ id, weather_state_abbr }, index) => (
         <div
           key={id}
+          data-testid={`day-${index}`}
           onClick={() => {
             handleDaySelect(index);
           }}

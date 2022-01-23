@@ -60,7 +60,7 @@ function Homepage() {
 
   return (
     <PageContainer>
-      <div>
+      <div data-testid="homepage">
         <Header />
       </div>
 

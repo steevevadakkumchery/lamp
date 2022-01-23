@@ -20,7 +20,7 @@ function LoadingSpinner() {
   }, [loadingDot]);
 
   return (
-    <div className="loading-spinner-container">
+    <div className="loading-spinner-container" data-testid="loader">
       <img width={100} height={100} src={spinner} alt="loading spinner" />
       <span className="loading-text">Loading{loadingDot}</span>
     </div>

@@ -17,11 +17,13 @@ function Details() {
 
   useEffect(() => {
     getWeatherData();
+    return () => {
+      setSelectedDay({});
+    };
   }, []);
 
   const getWeatherData = async () => {
     const weatherDataResponse = await getCityDataDeep(id);
-    console.log(weatherDataResponse);
     setWeatherData(weatherDataResponse);
     setSelectedDay(weatherDataResponse.consolidated_weather[0]);
   };
@@ -43,12 +45,12 @@ function Details() {
 
   return (
     <PageContainer>
-      <div>
+      <div data-testid="details">
         <Header />
       </div>
       {woeid ? (
         <>
-          <div>
+          <div data-testid="current-weather">
             <CurrentWeather {...currentWeatherProps()} />
           </div>
           <div>
